@@ -225,16 +225,10 @@
 						<li class="header">Latest News from Prime Alarm
 						</li>
 
-							<li><a href="http://primemedicalalert.com/news/all_the_fireworks_in_san_diego_go_off_at_once_by_a_computer_glitch/">All The Fireworks in San Diego Go Off at Once By a Computer Glitch!</a></li>
-
-							<li><a href="http://primemedicalalert.com/news/breast_milk_kills_hiv/">Breast Milk Kills HIV</a></li>
-
-							<li><a href="http://primemedicalalert.com/news/5_ways_to_avoid_falls/">5 Ways to Avoid Falls</a></li>
-
-							<li><a href="http://primemedicalalert.com/news/men_who_wait_to_have_kids_may_be_helping_grandchildren/">Men Who Wait to Have Kids May Be Helping Grandchildren</a></li>
-
-							<li><a href="http://primemedicalalert.com/news/prostate_cancer_drug_trial_a_success/">Prostate Cancer Drug Trial a Success</a></li>
-
+						  {% for post in site.posts limit:5 %}
+						    <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+						  {% endfor %}
+						
 					</ul>
 				</div><!-- End footer links -->
 				<div id="intuit">
