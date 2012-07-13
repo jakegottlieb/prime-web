@@ -1,15 +1,43 @@
 ---
 layout: default
+hide_site_nav: true
 ---
 {% include JB/setup %}
-{% include themes/prime/page.html %}
 
-<h1> Posts archive: {{ page.period["month"] }} - {{page.period["year"]}} </h1><br>
-<ul>
-{% for post in page.period_posts %}
-<li> 
-    <a href="">{{ post.title }}</a><br>
-    <span class="entry-meta">Published: {{ post.date | date: "%B %d, %Y" }}</span>
-</li>
-{% endfor %}
-</ul>
+<div id="main">
+	<div id="side_nav" class="left clearfix"> 
+		<ul>		
+			<li class="tab {% if page.url == "/news/index.html" %}active{% endif %}"><a href="/news/">News Overview</a></li>
+			
+			
+			{% assign posts_collate = site.posts %}
+			{% include JB/navbar_posts %}
+		</ul> 
+	</div>
+
+	<div id="content">
+		<h2>
+			Blog &amp; News
+		</h2>
+		<br/>
+		
+	{% for post in page.period_posts %}
+			<div class="entry">
+				<div class="body">
+					<h3>
+						{{ post.title }}
+					</h3>
+					<div class="entryInfo" style="padding-bottom: 15px">
+						<span class="date">July 05, 2012 </span> &nbsp;&nbsp;&nbsp;&nbsp; <a href="{{ post.url }}">Permalink</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					</div><!-- end .entryInfo -->
+
+						 {{ post.content | markdownify }}
+
+					<a href="{{ post.url }}">Continue Reading</a>
+	<br><br>
+				</div><!-- end .body -->
+			</div><!-- end .entry -->
+			
+	{% endfor %}
+	</div>
+</div>

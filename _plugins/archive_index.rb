@@ -8,6 +8,8 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'archive_index.html')
       self.data['period'] = period
+      self.data["month"] = sprintf("%02d", period["month"])
+      self.data["year"] = period["year"].to_s
       self.data['period_posts'] = posts
       archive_title_prefix = site.config['archive_title_prefix'] || 'Archive: &ldquo;'
       archive_title_suffix = site.config['archive_title_suffix'] || '&rdquo;'
