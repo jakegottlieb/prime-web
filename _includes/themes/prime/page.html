@@ -1,0 +1,19 @@
+{% if page.hide_site_nav != true %}
+<div id="side_nav" class="left clearfix"> 
+	<ul>
+		{% assign pages_list = site.pages %}
+        {% include JB/pm_section_pages_list %}
+	</ul> 
+</div>
+{% endif %}
+
+{% if page.hide_site_nav != true %}
+<div id="content">
+{% else %}
+<div id="content" class="full">
+{% endif %}
+	{% if page.show_upsell_text and page.show_upsell_text == true %}
+	<p><a class="top_cta_text more request_information" href="/request/">It's Free! Request Information Now</a></p>
+	{% endif %}
+    {{ content }}
+</div>

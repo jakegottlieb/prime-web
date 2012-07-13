@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+	<meta name="msvalidate.01" content="01CA06B57E5F22AAD304FF73CE204C73" />
+	<meta name="google-site-verification" content="hugO2PN7wyuUO80kNGT_UnMnqC-5qLBmm9FN2r_DSiA" />
+	<meta name="google-site-verification" content="6CjBzC-HmXBKSAyMkPJoi4yTgU57148WErSvXFCTXjM" />
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+	<meta itemprop="name" content="Prime Medical Alert" />
+	<meta itemprop="description" content="Maintain your independence with our high quality medical alert systems monitored by EMT certified operators." />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="author" content="Prime Medical Alert, LLC" />
+	<meta name="viewport" content="width=1024" />
+			
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-12250263-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+	
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+	{% comment %}
+    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+	{% endcomment %}
+	<script type="text/javascript" src="http://www.primemedicalalert.com/javascripts/jquery.js"></script>
+	<script type="text/javascript" src="http://www.primemedicalalert.com/javascripts/jquery-ui.js"></script>
+	<script type="text/javascript" src="http://www.primemedicalalert.com/javascripts/jquery_ujs.js"></script>
+	
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+		<link rel='stylesheet' type='text/css' href='http://primemedicalalert.com/?css=site/fonts' />
+		<link rel='stylesheet' type='text/css' href='http://primemedicalalert.com/?css=site/base' />
+		<link rel='stylesheet' type='text/css' href='http://primemedicalalert.com/?css=site/phoenix-medical-alert' />
+		<link rel='stylesheet' type='text/css' href='/smoothness/jquery-ui-1.8.11.custom.css' />
+
+		<!-- Unfortunately, we need this in the head to address the flash of unstyled text (FOUT) in Firefox -->
+
+		<script type="text/javascript">
+(function(){
+			// if firefox 3.5+, hide content till load (or 3 seconds) to prevent FOUT
+			var d = document, e = d.documentElement, s = d.createElement('style');
+			if (e.style.MozTransform === ''){ // gecko 1.9.1 inference
+				s.textContent = 'body{visibility:hidden}';
+				e.firstChild.appendChild(s);
+				function f(){ s.parentNode && s.parentNode.removeChild(s); }
+					addEventListener('load',f,false);
+					setTimeout(f,2000); 
+				}
+			})();
+		</script><!-- End FOUT Fix -->
+		
+  </head>
+
+  <body {{if page.url == "/index.html"}}class="home" id="home"{{endif}}>
+		<!-- Start Header -->
+		<div id="header">
+			<!-- Logo -->
+			<a href="/" id="logo" class="ir" name="logo">Prime Medical Alert</a> <!-- Tagline -->
+			<div id="tagline">
+				<span class="phxmedcall">Call 1-800-723-6442 and Start Now</span>
+			</div><!-- Login/Sign up -->
+			<div id="user_auth">
+				<a href="http://www.bbb.org/central-northern-western-arizona/business-reviews/medical-alarms/prime-medical-alert-in-scottsdale-az-1000008869/" /> <img src="http://www.primemedicalalert.com/images/rd/home/bbb-badge.png" width="120" height="33" alt="BBB A+" /></a>
+
+			</div><!-- Primary Navigation -->
+			<div id="nav">
+				{% assign pages_list = site.pages %}
+	            {% assign group = 'navigation' %}
+	            {% include JB/pm_pages_list %}
+				<a style="font-size:18px;" href="/request/" class="request_information nav_how-it-works last item">REQUEST INFORMATION</a>
+			</div>
+		</div><!-- End Header  -->
+		
+{% comment %}
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <ul class="nav">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+        </div>
+      </div>
+    </div>
+{% endcomment %}
+
+	{{ content }}
+
+      <div id="footer">
+				<!-- Start utilities -->
+				<div id="utilities" class="clearfix">
+
+	<div id="security_logos" class="left">
+						<a href="http://www.bbb.org/phoenix/business-reviews/medical-alarms/phoenix-medical-alert-in-scottsdale-az-1000008869/"><span id="verisign"></span><span id="truste"></span> <span id="mcafee"></span></a>
+					</div>
+
+
+					<div id="social" class="left">
+						<a href="http://www.facebook.com/pages/Medical-Alert/152392014787055"><span id="facebook"></span></a> <a href="http://www.twitter.com/PrimeMedAlert"><span id="twitter"></span></a> <a href="http://feeds.feedburner.com/PrimeMedicalAlertNews"><span id="rss"></span></a><div id="plus-one" style="padding-top:12px;padding-left:20px;"><div id="___plusone_0" style="height: 15px; width: 24px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial; "><iframe allowtransparency="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin: 0px; border-style: none; height: 15px; width: 24px; position: static; left: 0px; top: 0px; visibility: visible; " tabindex="0" vspace="0" width="100%" id="I1_1341885616516" name="I1_1341885616516" src="https://plusone.google.com/_/+1/fastbutton?bsv=pr&amp;url=http%3A%2F%2Fwww.primemedicalalert.com%2Fwho-we-are%2F&amp;size=small&amp;count=false&amp;origin=http%3A%2F%2Fwww.primemedicalalert.com&amp;hl=en-US&amp;jsh=m%3B%2F_%2Fapps-static%2F_%2Fjs%2Fgapi%2F__features__%2Frt%3Dj%2Fver%3DqtvzPMli2GA.en_US.%2Fsv%3D1%2Fam%3D!0Tt3uNrLr0Coc6egjA%2Fd%3D1%2Frs%3DAItRSTOtcgAD4dpnSQl_RohzS0XsePhHFg#id=I1_1341885616516&amp;parent=http%3A%2F%2Fwww.primemedicalalert.com&amp;rpctoken=354164158&amp;_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart" title="+1"></iframe></div></div>
+					</div>
+					<div id="mobile" class="left">
+						<div id="iphone"></div>
+						<div id="get_mint">
+							Get Prime Medical Alert for: <a class="request_information" href="#">iPhone</a> | <a class="request_information" href="#">Android</a>
+						</div>
+					</div>
+				</div><!--  End utilities -->
+				<!-- Start shadow -->
+				<div id="shadow" class="clearfix">
+					<div id="shadow_left" class="left"></div>
+					<div id="shadow_middle" class="left"></div>
+					<div id="shadow_right" class="left"></div>
+				</div><!-- End shadow -->
+				<!-- Start footer links -->
+				<div id="links" class="clearfix">
+					<ul class="first left list">
+						<li class="header">Site Links
+						</li>
+						<li>
+							<a href="">Home</a>
+						</li>
+						<li>
+							<a href="/terms/privacy_policy/">Privacy &amp; Security</a>
+						</li>
+						<li>
+							<a href="/news/">Medical Alert and Alarm News</a>
+						</li>
+
+						<li>
+							<a href="/who-we-are/faq/">Frequently Asked Questions</a>
+						</li>
+	                                        <li>
+							<a href="/sitemap/">Site Map</a>
+						</li>
+					</ul>
+					<ul class="left list">
+						<li class="header">Our Products
+						</li>
+
+
+
+						<li>
+							<a href="http://primemedicalalert.com/products/category/traditional/">Traditional</a>
+						</li>
+
+						<li>
+							<a href="http://primemedicalalert.com/products/category/fall_detection/">Fall Detection</a>
+						</li>
+
+						<li>
+							<a href="http://primemedicalalert.com/products/category/medipendant/">Medipendant</a>
+						</li>
+
+						<li>
+							<a href="http://primemedicalalert.com/products/category/surepod/">SurePod</a>
+						</li>
+
+						<li>
+							<a href="http://primemedicalalert.com/products/category/911_everywhere/">911 Everywhere</a>
+						</li>
+
+
+					</ul>
+					<ul class="left list">
+						<li class="header">Traditional/PERS
+						</li>
+
+							<li><a href="http://primemedicalalert.com/products/category/traditional/lockbox/">Free Lockbox</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/traditional/medical_alarms/">Main Unit</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/traditional/traditional_simple_setup/">Traditional Simple Setup</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/traditional/belt_clip/">Belt Clip</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/traditional/bracelet/">Bracelet</a></li>
+
+					</ul>
+					<ul class="left list">
+						<li class="header">Medipendant
+						</li>
+
+
+							<li><a href="http://primemedicalalert.com/products/category/medipendant/lowest_prices_guaranteed/">Lowest Prices Guaranteed</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/medipendant/lockbox/">Free Lockbox</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/medipendant/mobile_add-on/">Mobile Add-On</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/medipendant/pricing/">Pricing</a></li>
+
+							<li><a href="http://primemedicalalert.com/products/category/medipendant/wall_communicator/">Wall Communicator</a></li>
+
+					</ul>
+					<ul class="left list">
+						<li class="header">Latest News from Prime Alarm
+						</li>
+
+							<li><a href="http://primemedicalalert.com/news/all_the_fireworks_in_san_diego_go_off_at_once_by_a_computer_glitch/">All The Fireworks in San Diego Go Off at Once By a Computer Glitch!</a></li>
+
+							<li><a href="http://primemedicalalert.com/news/breast_milk_kills_hiv/">Breast Milk Kills HIV</a></li>
+
+							<li><a href="http://primemedicalalert.com/news/5_ways_to_avoid_falls/">5 Ways to Avoid Falls</a></li>
+
+							<li><a href="http://primemedicalalert.com/news/men_who_wait_to_have_kids_may_be_helping_grandchildren/">Men Who Wait to Have Kids May Be Helping Grandchildren</a></li>
+
+							<li><a href="http://primemedicalalert.com/news/prostate_cancer_drug_trial_a_success/">Prostate Cancer Drug Trial a Success</a></li>
+
+					</ul>
+				</div><!-- End footer links -->
+				<div id="intuit">
+					<div id="intuit_links">
+						<a href="/terms/">Legal Notice</a> | <a href="/terms/terms_of_sale/">Terms of Sale</a> | <a href="/terms/privacy_policy/">Privacy</a> | <a href="/who-we-are/">About Prime Medical Alert</a>
+					</div>
+					<div id="intuit_copyright">
+						<p>
+							©2012 Prime Alarm, LLC. All rights reserved. Prime Medical Alert is a trademark of Prime Alarm, LLC<br>
+							Terms, conditions, features, availability, pricing, fees, service and support options subject to change without notice.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+    </div> <!-- /container -->
+
+    {% include JB/analytics %}
+  </body>
+</html>
